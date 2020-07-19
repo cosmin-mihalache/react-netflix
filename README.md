@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Application Structure
 
-![Capture](https://user-images.githubusercontent.com/54737756/87749934-b592ad80-c802-11ea-9e1e-6bd0e68be07f.JPG)
+![image](https://user-images.githubusercontent.com/54737756/87876332-3529a380-c9e0-11ea-9dc7-61f7c48b6cda.png)
