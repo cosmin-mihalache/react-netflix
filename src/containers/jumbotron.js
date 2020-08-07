@@ -1,5 +1,5 @@
 import React from 'react';
-import Jumbotron from '../components/jumbotron';
+import {Jumbotron} from '../components';
 import jumbotronData from '../fixtures/jumbotron.json';
 
 export function JumbotronContainer() {
