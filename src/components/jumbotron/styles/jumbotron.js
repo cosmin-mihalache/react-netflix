@@ -15,9 +15,27 @@ export const Inner = styled.div`
   }
 `;
 
-export const Item = styled.div``;
+export const Pane = styled.div`
+  width: 50%;
 
-export const Container = styled.section``;
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0 45px;
+    text-align: center;
+  }
+`;
+
+export const Item = styled.div`
+  display: flex;
+  color: white;
+  border-bottom: 10px solid #222;
+  padding: 50px 5%;
+  overflow: hidden;
+`;
+
+export const Container = styled.section`
+  background-color: black;
+`;
 
 export const Title = styled.h1`
   font-size: 3.5rem;
