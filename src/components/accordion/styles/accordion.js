@@ -1,25 +1,28 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
 `;
 
-export const Frame = styled.div`
-  margin-bottom: 10px;
-  max-width: 650px;
-
-  @media (max-width: 600px) {
-    width: 400px;
-  }
-`;
-
 export const Inner = styled.div`
   display: flex;
   padding: 70px 45px;
   flex-direction: column;
-  max-width: 815px;
+  width: 815px;
   margin: auto;
+`;
+
+export const Frame = styled.div`
+  margin-bottom: 10px;
+`;
+
+export const Item = styled.div`
+  color: white;
+  margin-bottom: 10px;
+  &:first-of-type {
+    margin-top: 4em;
+  }
 `;
 
 export const Title = styled.h1`
@@ -29,20 +32,14 @@ export const Title = styled.h1`
   margin-bottom: 8px;
   color: white;
   text-align: center;
-  @media (max-width: 600px) {
+
+  @media (max-width: 700px) {
     font-size: 35px;
   }
 `;
 
-export const Item = styled.div`
-  color: white;
-  margin-bottom: 10px;
-  &:first-of-type {
-    margin-top: 3em;
-  }
-`;
-
 export const Header = styled.div`
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -53,14 +50,16 @@ export const Header = styled.div`
   padding: 0.8em 1.2em 0.8em 1.2em;
   user-select: none;
   align-items: center;
+
   img {
     filter: brightness(0) invert(1);
     width: 24px;
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       width: 16px;
     }
   }
-  @media (max-width: 600px) {
+
+  @media (max-width: 700px) {
     font-size: 16px;
   }
 `;
@@ -75,7 +74,9 @@ export const Body = styled.div`
   padding: 0.8em 2.2em 0.8em 1.2em;
   white-space: pre-wrap;
   user-select: none;
-  @media (max-width: 600px) {
+  box-sizing: border-box;
+
+  @media (max-width: 700px) {
     font-size: 16px;
     line-height: 22px;
   }
