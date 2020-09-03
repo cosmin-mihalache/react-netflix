@@ -22,5 +22,13 @@
     "image": "./images/misc/home-imac.jpg",
     "alt": "Money Heist | Netflix",
     "direction": "row"
+  },
+  {
+    "id": 4,
+    "title": "Get the Netflix Kids experience.",
+    "subTitle": "Kids enjoy their favorites in profiles made just for them, and parental controls ensure they’re watching the right things.",
+    "image": "./images/misc/netflix-kids.jpg",
+    "alt": "Netflix Kids",
+    "direction": "row-reverse"
   }
 ]
