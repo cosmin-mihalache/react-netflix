@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Footer } from '../..';
+import { Footer } from '../../../components';
 
 describe('<Footer />', () => {
   it('renders the <Footer /> with populated data', () => {

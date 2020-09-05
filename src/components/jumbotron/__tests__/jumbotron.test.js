@@ -27,11 +27,7 @@ describe('<Jumbotron />', () => {
 
     expect(getByText('Enjoy on your TV.')).toBeTruthy();
     expect(getByTestId('1-jumbotron')).toBeTruthy();
-    expect(
-      getByText(
-        'Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.'
-      )
-    ).toBeTruthy();
+    expect(getByText('Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.')).toBeTruthy();
     expect(getAllByAltText('Tiger King | Netflix')).toBeTruthy();
   });
 });
