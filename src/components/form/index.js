@@ -11,8 +11,8 @@ import {
   Error,
 } from './styles/form';
 
-export default function Form({ chidren, ...restProps }) {
-  return <Container {...restProps}>{chidren}</Container>;
+export default function Form({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
 }
 
 Form.Base = function FormBase({ children, ...restProps }) {
@@ -39,8 +39,8 @@ Form.Link = function FormLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
 
-Form.Text = function FormText({ chilren, ...restProps }) {
-  return <Text {...restProps}>{chilren}</Text>;
+Form.Text = function FormText({ children, ...restProps }) {
+  return <Text {...restProps}>{children}</Text>;
 };
 
 Form.SmallText = function FormSmallText({ children, ...restProps }) {
