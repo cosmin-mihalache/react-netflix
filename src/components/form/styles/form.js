@@ -32,7 +32,7 @@ export const Error = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: red;
+  color: white;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 28px;

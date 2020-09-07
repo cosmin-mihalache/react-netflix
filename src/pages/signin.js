@@ -37,13 +37,13 @@ export default function SignIn() {
           />
 
           <Form.Submit disabled={isInvalid} type="submit">
-            Sign in
+            Sign In
           </Form.Submit>
           <Form.Text>
             New to Netflix.<Form.Link to="/signup"> Sign up now.</Form.Link>
           </Form.Text>
           <Form.SmallText>
-            This page is protected by Google reCAPTCHA
+            This page is protected by Google reCAPTCHA.
           </Form.SmallText>
         </Form.Base>
       </Form>
