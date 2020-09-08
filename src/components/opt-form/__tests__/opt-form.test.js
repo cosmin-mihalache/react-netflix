@@ -14,11 +14,7 @@ describe('OptForm', () => {
       </OptForm>
     );
 
-    expect(
-      getByText(
-        'Ready to watch? Enter your email to create or restart your membership.'
-      )
-    ).toBeTruthy();
+    expect(getByText('Ready to watch? Enter your email to create or restart your membership.')).toBeTruthy();
     expect(getByPlaceholderText('Email Address')).toBeTruthy();
     expect(getByText('GET STARTED')).toBeTruthy();
   });
