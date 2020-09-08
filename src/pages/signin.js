@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from '../components';
 import { HeaderContainer } from '../containers/header';
+import { FooterContainer } from '../containers/footer';
 
 export default function SignIn() {
   const [error, setError] = useState('');
@@ -47,6 +48,15 @@ export default function SignIn() {
           </Form.SmallText>
         </Form.Base>
       </Form>
+      <div>
+        <FooterContainer />
+      </div>
     </HeaderContainer>
+    
   );
 }
+
+/* Add in FooterContainer to demonstrate opacity change */
+/* Wrap it in a div to avoid flexing it's contents */
+/* May be able to improve upon this, since having the footer inside the header
+  seems like poor semantics */
