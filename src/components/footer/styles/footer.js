@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
+/* Override the body background-color (global-styles.js) for opacity
+    will allow background to peak through*/
 export const Container = styled.div`
   display: flex;
   max-width: 1000px;
   flex-direction: column;
   padding: 70px 50px;
   margin: auto;
+  background-color: rgba(0,0,0,0.5);
 
   @media (max-width: 1000px) {
     padding: 60px 25px;
