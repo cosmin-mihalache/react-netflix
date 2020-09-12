@@ -1,49 +1,51 @@
 import React, { useState } from 'react';
-import { Form } from '../components';
 import { HeaderContainer } from '../containers/header';
+import { Form } from '../components';
 import { FooterContainer } from '../containers/footer';
 
-export default function SignIn() {
-  const [error, setError] = useState('');
+export default function SignUp() {
+  const [firstName, setFirstName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   // form validation
-  const isInvalid = password === '' || emailAddress === '';
+  const isInvalid = emailAddress === '' || password === '' || firstName === '';
 
-  const handleSignIn = (event) => {
+  const handleSignUp = (event) => {
     event.preventDefault();
-
-    //call in here the firebase to auth the user
-    //if there's error, populate the error state
   };
+
   return (
     <>
       <HeaderContainer>
         <Form>
-          <Form.Title>Sign In</Form.Title>
+          <Form.Title>Sign Up</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
 
-          <Form.Base onSubmit={handleSignIn} method="POST">
+          <Form.Base onSubmit={handleSignUp} method="POST">
+            <Form.Input
+              placeholder="First Name"
+              value={firstName}
+              onChange={({ target }) => setFirstName(target.value)}
+            />
             <Form.Input
               placeholder="Email address"
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
             />
-
             <Form.Input
               placeholder="Password"
               type="password"
-              autoCompete="off"
+              autoComplete="off"
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-
             <Form.Submit disabled={isInvalid} type="submit">
-              Sign In
+              Sign Up
             </Form.Submit>
             <Form.Text>
-              New to Netflix.<Form.Link to="/signup"> Sign up now.</Form.Link>
+              Already a user?<Form.Link to="/signin"> Sign in now.</Form.Link>
             </Form.Text>
             <Form.SmallText>
               This page is protected by Google reCAPTCHA.
@@ -55,8 +57,3 @@ export default function SignIn() {
     </>
   );
 }
-
-/* Add in FooterContainer to demonstrate opacity change */
-/* Wrap it in a div to avoid flexing it's contents */
-/* May be able to improve upon this, since having the footer inside the header
-  seems like poor semantics */
