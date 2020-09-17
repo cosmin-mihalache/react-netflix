@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 /* Override the body background-color (global-styles.js) for opacity
     will allow background to peak through*/
