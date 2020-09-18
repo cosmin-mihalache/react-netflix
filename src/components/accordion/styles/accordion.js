@@ -13,10 +13,6 @@ export const Inner = styled.div`
   margin: auto;
 `;
 
-export const Frame = styled.div`
-  margin-bottom: 10px;
-`;
-
 export const Item = styled.div`
   color: white;
   margin-bottom: 10px;

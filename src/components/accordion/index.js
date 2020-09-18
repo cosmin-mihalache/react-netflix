@@ -6,7 +6,6 @@ import {
   Container,
   Inner,
   Item,
-  Frame,
 } from './styles/accordion';
 
 const ToggleContext = createContext();
@@ -23,10 +22,6 @@ Accordion.Title = function AccordionTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
-  return <Frame {...restProps}>{children}</Frame>;
-};
-
 Accordion.Item = function AccordionItem({ children, ...restProps }) {
   const [toggleShow, setToggleShow] = useState(false);
   return (
@@ -39,8 +34,9 @@ Accordion.Item = function AccordionItem({ children, ...restProps }) {
 Accordion.Header = function AccordionHeader({ children, ...restProps }) {
   const { toggleShow, setToggleShow } = useContext(ToggleContext);
   return (
-    <Header onClick={() => setToggleShow(!toggleShow)} {...restProps}>
+    <Header onClick={() => setToggleShow(toggleShow => !toggleShow)} {...restProps}>
       {children}
+      {/* <pre>{JSON.stringify(toggleShow, null, 2)}</pre> -checking the state*/ }
       {toggleShow ? (
         <img src="/images/icons/close-slim.png" alt="Close" />
       ) : (
