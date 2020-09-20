@@ -4,7 +4,7 @@ export const Inner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* destruct props*/
+  /* destruct ====> passing down the <Inner /> props*/
   flex-direction: ${({ direction }) => direction};
   max-width: 1100px;
   margin: auto;

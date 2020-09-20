@@ -9,11 +9,16 @@ import {
   Pane,
 } from './styles/jumbotron';
 
+/****
+* If no direction is passed make it default to 'row' 
+****/
+
 export default function Jumbotron({
   children,
   direction = 'row',
   ...restProps
 }) {
+
   return (
     <Item {...restProps}>
       <Inner direction={direction}>{children}</Inner>

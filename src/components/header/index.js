@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as ReachRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
 import { Background, Container, ButtonLink, Logo } from './styles/header';
 
 export default function Header({ bg = true, children, ...restProps }) {
@@ -12,9 +12,9 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
 
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
   return (
-    <ReachRouterLink to={to}>
+    <ReactRouterLink to={to}>
       <Logo {...restProps} />
-    </ReachRouterLink>
+    </ReactRouterLink>
   );
 };
 

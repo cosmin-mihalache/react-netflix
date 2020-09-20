@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { Link as ReachRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const Container = styled.section`
   display: flex;
@@ -85,7 +85,7 @@ export const Submit = styled.button`
   }
 `;
 
-export const Link = styled(ReachRouterLink)`
+export const Link = styled(ReactRouterLink)`
   color: white;
   text-decoration: none;
 
