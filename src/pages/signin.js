@@ -1,21 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { FirebaseContext } from '../context/firebase';
 import { Form } from '../components';
 import { HeaderContainer } from '../containers/header';
 import { FooterContainer } from '../containers/footer';
+import * as ROUTES from '../constants/routes';
+
+/*
+ * - import useContext, FirebaseContext
+ * - desctructure firebase from index.js
+ * - useHistory hook to push to the Browse Page
+ * - enabled E/P authentification on firebase
+ */
 
 export default function SignIn() {
+  const history = useHistory();
+  const { firebase } = useContext(FirebaseContext);
   const [error, setError] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
 
-  // form validation
+  /* form validation */
+
   const isInvalid = password === '' || emailAddress === '';
 
   const handleSignIn = (event) => {
     event.preventDefault();
 
-    //call in here the firebase to auth the user
-    //if there's error, populate the error state
+    /* call in here the firebase to auth the user
+     *  if there's error, populate the error state
+     */
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(emailAddress, password)
+      .then(() => {
+        // push to the browse page
+        history.push(ROUTES.BROWSE);
+      })
+      .catch((error) => {
+        setEmailAddress('')
+        setPassword('');
+        setError(error.message)
+        
+      });
   };
   return (
     <>
@@ -55,8 +82,3 @@ export default function SignIn() {
     </>
   );
 }
-
-/* Add in FooterContainer to demonstrate opacity change */
-/* Wrap it in a div to avoid flexing it's contents */
-/* May be able to improve upon this, since having the footer inside the header
-  seems like poor semantics */
