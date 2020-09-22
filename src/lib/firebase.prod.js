@@ -10,8 +10,9 @@ const config = {
   projectId: process.env.REACT_APP_NETFLIX_PROJECT_ID,
   storageBucket: process.env.REACT_APP_NETFLIX_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_NETFLIX_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_NETFLIX_APP_ID,
+  appId: process.env.REACT_APP_NETFLIX_APP_ID
 };
+
 
 const firebase = Firebase.initializeApp(config);
 
