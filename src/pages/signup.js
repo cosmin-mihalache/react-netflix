@@ -1,19 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { FirebaseContext } from '../context/firebase';
 import { HeaderContainer } from '../containers/header';
 import { Form } from '../components';
 import { FooterContainer } from '../containers/footer';
+import * as ROUTES from '../constants/routes';
 
 export default function SignUp() {
+  const history = useHistory();
+  const { firebase } = useContext(FirebaseContext);
   const [firstName, setFirstName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  // form validation
+  /* form validation */
+
   const isInvalid = emailAddress === '' || password === '' || firstName === '';
 
   const handleSignUp = (event) => {
     event.preventDefault();
+  
+  /* create a user with an email and password 
+   * and then update the user with firstName, photo
+   */
+
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(emailAddress, password)
+      .then((result) =>
+        result.user
+          .updateProfile({
+            displayName: firstName,
+            imgURL: Math.floor(Math.random() * 5) + 1,
+          })
+          .then(() => {
+            history.push(ROUTES.BROWSE);
+          })
+      )
+      .catch((error) => {
+        setFirstName('');
+        setEmailAddress('');
+        setPassword('');
+        setError(error.message);
+      });
   };
 
   return (
