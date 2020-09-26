@@ -22,8 +22,7 @@ export default function SignUp() {
     event.preventDefault();
   
   /* create a user with an email and password 
-   * anf then update the user with firstName 
-   * and photo
+   * and then update the user with firstName, photo
    */
 
     firebase
