@@ -27,14 +27,14 @@ export default function SignIn() {
   const handleSignIn = (event) => {
     event.preventDefault();
 
-    /* call in here the firebase to auth the user
+    /* call firebase to auth the user
      *  if there's error, populate the error state
      */
     firebase
       .auth()
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
-        // push to the browse page
+        // push to browse page
         history.push(ROUTES.BROWSE);
       })
       .catch((error) => {
