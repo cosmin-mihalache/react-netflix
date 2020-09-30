@@ -22,7 +22,8 @@ export default function SignUp() {
     event.preventDefault();
   
   /* create user with email and password 
-   * then update user profile with: firstName, img
+   * Firebase v3 Auth offers an updateProfile method 
+   * that passes displayName and photoURL to Firebase.
    */
 
     firebase
@@ -32,7 +33,7 @@ export default function SignUp() {
         result.user
           .updateProfile({
             displayName: firstName,
-            imgURL: Math.floor(Math.random() * 5) + 1,
+            photoURL: Math.floor(Math.random() * 5) + 1,
           })
           .then(() => {
             history.push(ROUTES.BROWSE);

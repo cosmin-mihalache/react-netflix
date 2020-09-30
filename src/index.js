@@ -8,6 +8,7 @@ import { FirebaseContext } from './context/firebase';
 
 /**
  * Wrap the application with FirebaseContext
+ * Renders x2 because of StrictMode
  */
 
 ReactDOM.render(
