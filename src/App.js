@@ -3,16 +3,16 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Home, SignIn, SignUp, Browse } from './pages';
 import * as ROUTES from './constants/routes';
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
-
+import { useAuthListener } from './hooks';
 
 /*
  * Remove the initial Route because they
  * are coming now from ./helpers/routes
+ * PLay with const user = null / {}
  */
 
 function App() {
-  const user = null;
-
+  const { user } = useAuthListener();
   return (
     <Router>
       <Switch>
