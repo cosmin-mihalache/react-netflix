@@ -2,10 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { FirebaseContext } from '../context/firebase';
 
 /**
- * Custom hook listener/subscription to checkout the user state signin or signout(lost credentials)
- * With Json.parse check in localStorage parse that string and bring it back as a regular object
- * and gets the item 'authUser'
- * useEffect will run once on every hit of the page and checks for auth of a user then clean up
+ * useEffect will run once on every hit on the page and checks for auth of a user then cleans up.
  */
 
 export default function useAuthListener() {
