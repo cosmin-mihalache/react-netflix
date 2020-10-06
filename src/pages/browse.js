@@ -6,9 +6,11 @@ export default function Browse() {
   // slides
   // pass it to browse container
   const { series } = useContent('series');
-//   const {films} = useContent('films')
+  const { films} = useContent('films')
+
+ 
    console.log(series);
-//   console.log(films)
+   console.log(films)
 
   return <p>This is the Browse Page.</p>;
 }
