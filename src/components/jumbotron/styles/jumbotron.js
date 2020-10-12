@@ -31,6 +31,10 @@ export const Item = styled.div`
   border-bottom: 10px solid #222;
   padding: 50px 5%;
   overflow: hidden;
+
+  &:first-of-type {
+    border-top: 10px solid #222;
+  }
 `;
 
 export const Container = styled.section`
