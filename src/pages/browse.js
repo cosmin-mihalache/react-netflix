@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowseContainer } from '../containers/browse';
 import { useContent } from '../hooks';
 import selectionFilter from '../utils/selection-filter';
 
@@ -15,5 +16,5 @@ export default function Browse() {
   // pass it to browse container
  
 
-  return <p>This is the Browse Page.</p>;
+  return <BrowseContainer slides={slides}/>;
 }
