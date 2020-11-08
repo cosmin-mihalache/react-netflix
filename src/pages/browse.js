@@ -12,7 +12,7 @@ export default function Browse() {
 
   // slides
   const slides = selectionFilter({series, films})
-  console.log(slides);
+ // console.log(slides);
   // pass it to browse container
  
 
