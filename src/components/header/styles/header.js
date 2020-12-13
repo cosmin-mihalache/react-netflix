@@ -15,6 +15,11 @@ export const Background = styled.section`
   }
 `;
 
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,8 +37,17 @@ export const Container = styled.div`
   }
 `;
 
+export const Picture = styled.button`
+  background: url(${({ src }) => src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`;
+
 export const Link = styled.p`
-  color: #fff;
+  color: white;
   text-decoration: none;
   margin-right: 30px;
   font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
@@ -45,6 +59,58 @@ export const Link = styled.p`
 
   &:last-of-type {
     margin-right: 0;
+  }
+`;
+
+export const Dropdown = styled.div`
+  display: none;
+  background-color: black;
+  position: absolute;
+  padding: 10px;
+  width: 100px;
+  top: 32px;
+  right: 10px;
+
+  ${Group}:last-of-type ${Link} {
+    cursor: pointer;
+  }
+
+  ${Group} {
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    ${Link}, ${Picture} {
+      cursor: default;
+    }
+
+    button {
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+
+  button {
+    cursor: pointer;
+  }
+
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
