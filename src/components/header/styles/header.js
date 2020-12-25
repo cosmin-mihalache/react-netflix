@@ -135,13 +135,13 @@ export const PlayButton = styled.button`
   font-size: 20px;
   margin-top: 30px;
   cursor: pointer;
+  transition: background-color 0.2s;
 
   &:hover {
     background-color: #ff1e1e;
     color: white;
   }
-
-`
+`;
 export const SearchInput = styled.input`
   background-color: #44444459;
   color: white;
@@ -149,10 +149,10 @@ export const SearchInput = styled.input`
   transition: width 0.5s;
   height: 30px;
   font-size: 14px;
-  margin-left: ${({ active }) => (active === true ? "10px" : "0")};
-  padding: ${({ active }) => (active === true ? " 0 10px" : "0")};
-  opacity: ${({ active }) => (active === true ? "1" : "0")};
-  width: ${({ active }) => (active === true ? "200px" : "0")};
+  margin-left: ${({ active }) => (active === true ? '10px' : '0')};
+  padding: ${({ active }) => (active === true ? ' 0 10px' : '0')};
+  opacity: ${({ active }) => (active === true ? '1' : '0')};
+  width: ${({ active }) => (active === true ? '200px' : '0')};
 `;
 
 export const Profile = styled.div`
