@@ -1,7 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { SelectProfileContainer } from './profiles';
+import { FooterContainer } from './footer';
 import { FirebaseContext } from '../context/firebase';
-import { Loading, Header, Card } from '../components';
+import { Loading, Header, Card, Player } from '../components';
 import * as ROUTES from '../constants/routes';
 
 export function BrowseContainer({ slides }) {
@@ -15,12 +16,12 @@ export function BrowseContainer({ slides }) {
   const user = firebase.auth().currentUser || {};
 
   useEffect(() => {
-    console.log('profile', profile);
+    //console.log('profile', profile);
     setTimeout(() => {
       setLoading(false);
     }, 4000);
   }, [profile.displayName, profile]);
-  console.log(user);
+  //console.log(user);
 
   useEffect(() => {
     setSlideRows(slides[category]);
@@ -101,14 +102,15 @@ export function BrowseContainer({ slides }) {
               ))}
             </Card.Entities>
             <Card.Feature category={category}>
-              {/* <Player>
+              <Player>
                 <Player.Button />
                 <Player.Video />
-              </Player> */}
+              </Player>
             </Card.Feature>
           </Card>
         ))}
       </Card.Group>
+      <FooterContainer />
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />
