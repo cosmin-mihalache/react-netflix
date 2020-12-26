@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import Fuse from 'fuse.js';
 import { SelectProfileContainer } from './profiles';
 import { FooterContainer } from './footer';
 import { FirebaseContext } from '../context/firebase';
@@ -16,16 +17,29 @@ export function BrowseContainer({ slides }) {
   const user = firebase.auth().currentUser || {};
 
   useEffect(() => {
-    //console.log('profile', profile);
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
-  }, [profile.displayName, profile]);
-  //console.log(user);
+    }, 3000);
+  }, [profile.displayName]);
 
   useEffect(() => {
     setSlideRows(slides[category]);
   }, [slides, category]);
+
+  useEffect(() => {
+    const fuse = new Fuse(slideRows, {
+      keys: ['data.description', 'data.title', 'data.genre'],
+    });
+    debugger;
+    const results = fuse.search(searchTerm).map(({ item }) => item);
+
+    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+      setSlideRows(results);
+    } else {
+      setSlideRows(slides[category]);
+    }
+  }, [searchTerm, category, slides]);
+
   return profile.displayName ? (
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
@@ -52,10 +66,7 @@ export function BrowseContainer({ slides }) {
             </Header.TextLink>
           </Header.Group>
           <Header.Group>
-            <Header.Search
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-            ></Header.Search>
+            <Header.Search value={searchTerm} setSearchTerm={setSearchTerm} />
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
