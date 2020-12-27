@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> renders the <Card /> and toggles the card feature 1`] = `
+<div
+  class="card__Group-sc-1li1lye-2 ONTqS"
+>
+  <div
+    class="card__Container-sc-1li1lye-1 gvEZAM"
+  >
+    <p
+      class="card__Title-sc-1li1lye-0 hVUIak"
+    >
+      Documentaries
+    </p>
+    <div
+      class="card__Entities-sc-1li1lye-12 cwuFd"
+    >
+      <div
+        class="card__Item-sc-1li1lye-13 iknsgI"
+      >
+        <img
+          class="card__Image-sc-1li1lye-14 kCnvoJ"
+          data-testid="amanda-knox-item-feature"
+          src="/images/series/documentaries/amanda-knox/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1li1lye-11 eLjeNd"
+        >
+          <p
+            class="card__SubTitle-sc-1li1lye-3 dGrqJQ"
+          >
+            Amanda Knox
+          </p>
+          <p
+            class="card__Text-sc-1li1lye-4 iHlEut"
+          >
+            Amanda Marie Knox is an American woman who spent almost four years in an Italian prison.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="card__Container-sc-1li1lye-1 gvEZAM"
+  >
+    <p
+      class="card__Title-sc-1li1lye-0 hVUIak"
+    >
+      Feel Good
+    </p>
+    <div
+      class="card__Entities-sc-1li1lye-12 cwuFd"
+    >
+      <div
+        class="card__Item-sc-1li1lye-13 iknsgI"
+      >
+        <img
+          class="card__Image-sc-1li1lye-14 kCnvoJ"
+          data-testid="juno-item-feature"
+          src="/images/series/feel-good/juno/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1li1lye-11 eLjeNd"
+        >
+          <p
+            class="card__SubTitle-sc-1li1lye-3 dGrqJQ"
+          >
+            Juno
+          </p>
+          <p
+            class="card__Text-sc-1li1lye-4 iHlEut"
+          >
+            Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her babys adoptive parents than she expected.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> renders the <Card /> with populated data 1`] = `
+<div
+  class="card__Group-sc-1li1lye-2 ONTqS"
+>
+  <div
+    class="card__Container-sc-1li1lye-1 gvEZAM"
+  >
+    <p
+      class="card__Title-sc-1li1lye-0 hVUIak"
+    >
+      Documentaries
+    </p>
+    <div
+      class="card__Entities-sc-1li1lye-12 cwuFd"
+    >
+      <div
+        class="card__Item-sc-1li1lye-13 iknsgI"
+      >
+        <img
+          class="card__Image-sc-1li1lye-14 kCnvoJ"
+          src="/images/series/documentaries/amanda-knox/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1li1lye-11 eLjeNd"
+        >
+          <p
+            class="card__SubTitle-sc-1li1lye-3 dGrqJQ"
+          >
+            Amanda Knox
+          </p>
+          <p
+            class="card__Text-sc-1li1lye-4 iHlEut"
+          >
+            Amanda Marie Knox is an American woman who spent almost four years in an Italian prison.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="card__Container-sc-1li1lye-1 gvEZAM"
+  >
+    <p
+      class="card__Title-sc-1li1lye-0 hVUIak"
+    >
+      Feel Good
+    </p>
+    <div
+      class="card__Entities-sc-1li1lye-12 cwuFd"
+    >
+      <div
+        class="card__Item-sc-1li1lye-13 iknsgI"
+      >
+        <img
+          class="card__Image-sc-1li1lye-14 kCnvoJ"
+          src="/images/series/feel-good/juno/small.jpg"
+        />
+        <div
+          class="card__Meta-sc-1li1lye-11 eLjeNd"
+        >
+          <p
+            class="card__SubTitle-sc-1li1lye-3 dGrqJQ"
+          >
+            Juno
+          </p>
+          <p
+            class="card__Text-sc-1li1lye-4 iHlEut"
+          >
+            Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her babys adoptive parents than she expected.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

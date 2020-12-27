@@ -5,7 +5,7 @@ import { Accordion } from '../../../components';
 
 describe('Accordion', () => {
   it('renders the <Accordion /> with populated data', () => {
-    const { getByText } = render(
+    const { container, getByText } = render(
       <Accordion>
         <Accordion.Title>Frequently Asked Questions</Accordion.Title>
 
@@ -24,10 +24,11 @@ describe('Accordion', () => {
     expect(getByText('Where can I watch?')).toBeTruthy();
     expect(getByText('How do I cancel?')).toBeTruthy();
     expect(getByText('What can I watch on Neflix')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('opens and closes the <Accordion /> component', () => {
-    const { queryByText } = render(
+    const { container, queryByText } = render(
       <Accordion>
         <Accordion.Title>Frequently Asked Questions</Accordion.Title>
 
@@ -49,5 +50,6 @@ describe('Accordion', () => {
 
     fireEvent.click(queryByText('What can I watch on Neflix'));
     expect(queryByText(whatCanIWatchOnNetflixBodyText)).toBeFalsy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -30,7 +30,7 @@ export function BrowseContainer({ slides }) {
     const fuse = new Fuse(slideRows, {
       keys: ['data.description', 'data.title', 'data.genre'],
     });
-  
+
     const results = fuse.search(searchTerm).map(({ item }) => item);
 
     if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
@@ -66,7 +66,10 @@ export function BrowseContainer({ slides }) {
             </Header.TextLink>
           </Header.Group>
           <Header.Group>
-            <Header.Search value={searchTerm} setSearchTerm={setSearchTerm} />
+            <Header.Search
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+            />
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>

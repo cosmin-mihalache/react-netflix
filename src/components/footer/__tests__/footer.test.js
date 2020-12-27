@@ -4,7 +4,7 @@ import { Footer } from '../../../components';
 
 describe('<Footer />', () => {
   it('renders the <Footer /> with populated data', () => {
-    const { getByText } = render(
+    const {container, getByText } = render(
       <Footer>
         <Footer.Title>Questions? Call 0800-672-120</Footer.Title>
         <Footer.Break />
@@ -43,5 +43,6 @@ describe('<Footer />', () => {
     expect(getByText('Investor Relations')).toBeTruthy();
     expect(getByText('Privacy')).toBeTruthy();
     expect(getByText('Speed Test')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

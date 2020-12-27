@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Player /> renders the <Player with a minion video/> 1`] = `
+<div
+  class="player__Container-mwg9t9-0 fmCOHe"
+>
+  <button
+    class="player__Button-mwg9t9-4 HlOxQ"
+  >
+    Play
+  </button>
+</div>
+`;
