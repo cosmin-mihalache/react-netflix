@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderChildren render the <HeaderChildren /> just a subTitle 1`] = `
+<div
+  class="header-children__Container-sc-1eq3yi1-0 eYPLAp"
+>
+  <h2
+    class="header-children__SubTitle-sc-1eq3yi1-2 cRuqwl"
+  >
+    Watch anywhere. Cancel anytime.
+  </h2>
+</div>
+`;
+
+exports[`HeaderChildren render the <HeaderChildren /> just a title 1`] = `
+<div
+  class="header-children__Container-sc-1eq3yi1-0 eYPLAp"
+>
+  <h1
+    class="header-children__Title-sc-1eq3yi1-1 eEvkuc"
+  >
+    100% entertainment. EUR0.99 for your first 30 days.
+  </h1>
+  );
+</div>
+`;
+
+exports[`HeaderChildren renders the <HeaderChildren /> with populated data 1`] = `
+<div
+  class="header-children__Container-sc-1eq3yi1-0 eYPLAp"
+>
+  <h1
+    class="header-children__Title-sc-1eq3yi1-1 eEvkuc"
+  >
+    100% entertainment. EUR0.99 for your first 30 days.
+  </h1>
+  <h2
+    class="header-children__SubTitle-sc-1eq3yi1-2 cRuqwl"
+  >
+    Watch anywhere. Cancel anytime.
+  </h2>
+</div>
+`;

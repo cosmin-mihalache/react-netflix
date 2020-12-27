@@ -4,7 +4,7 @@ import { HeaderChildren } from '../../../components';
 
 describe('HeaderChildren', () => {
   it('renders the <HeaderChildren /> with populated data', () => {
-    const { getByText } = render(
+    const { container, getByText } = render(
       <HeaderChildren>
         <HeaderChildren.Title>
           100% entertainment. EUR0.99 for your first 30 days.
@@ -18,10 +18,11 @@ describe('HeaderChildren', () => {
       getByText('100% entertainment. EUR0.99 for your first 30 days.')
     ).toBeTruthy();
     expect(getByText('Watch anywhere. Cancel anytime.')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('render the <HeaderChildren /> just a title', () => {
-    const { queryByText, getByText } = render(
+    const {container, queryByText, getByText } = render(
       <HeaderChildren>
         <HeaderChildren.Title>
           100% entertainment. EUR0.99 for your first 30 days.
@@ -33,10 +34,11 @@ describe('HeaderChildren', () => {
       getByText('100% entertainment. EUR0.99 for your first 30 days.')
     ).toBeTruthy();
     expect(queryByText('Watch anywhere. Cancel anytime.')).toBeFalsy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('render the <HeaderChildren /> just a subTitle', () => {
-    const { queryByText, getByText } = render(
+    const {container, queryByText, getByText } = render(
       <HeaderChildren>
         <HeaderChildren.SubTitle>
           Watch anywhere. Cancel anytime.
@@ -47,5 +49,6 @@ describe('HeaderChildren', () => {
     expect(
       queryByText('100% entertainment. EUR0.99 for your first 30 days.')
     ).toBeFalsy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

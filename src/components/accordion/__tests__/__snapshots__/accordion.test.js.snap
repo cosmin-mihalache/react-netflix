@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion opens and closes the <Accordion /> component 1`] = `
+<div
+  class="accordion__Container-sc-1gyetxg-0 lkWANf"
+>
+  <div
+    class="accordion__Inner-sc-1gyetxg-1 MgMWN"
+  >
+    <h1
+      class="accordion__Title-sc-1gyetxg-3 ijnBSR"
+    >
+      Frequently Asked Questions
+    </h1>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        What is Netflix?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        How much does Netflix cost?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        Where can I watch?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        How do I cancel?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        What can I watch on Neflix
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        Is Netflix good for kids?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Accordion renders the <Accordion /> with populated data 1`] = `
+<div
+  class="accordion__Container-sc-1gyetxg-0 lkWANf"
+>
+  <div
+    class="accordion__Inner-sc-1gyetxg-1 MgMWN"
+  >
+    <h1
+      class="accordion__Title-sc-1gyetxg-3 ijnBSR"
+    >
+      Frequently Asked Questions
+    </h1>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        What is Netflix?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        How much does Netflix cost?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        Where can I watch?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        How do I cancel?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        What can I watch on Neflix
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="accordion__Item-sc-1gyetxg-2 dosBXH"
+    >
+      <div
+        class="accordion__Header-sc-1gyetxg-4 hyulXV"
+      >
+        Is Netflix good for kids?
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
