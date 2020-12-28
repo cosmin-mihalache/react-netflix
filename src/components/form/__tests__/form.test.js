@@ -6,9 +6,9 @@ jest.mock('react-router-dom');
 
 describe('<Form />', () => {
   it('renders the <Form /> with populated data', () => {
-    const { getByText, getByPlaceholderText, queryAllByText } = render(
+    const { container, getByText, getByPlaceholderText } = render(
       <Form>
-        <Form.Title>Sign In</Form.Title>
+        <Form.Title>Sign In Now</Form.Title>
         <Form.Base>
           <Form.Input placeholder="Email Address" onChange={() => {}} />
           <Form.Input
@@ -29,9 +29,27 @@ describe('<Form />', () => {
         </Form.SmallText>
       </Form>
     );
-    expect(queryAllByText('Sign In')).toBeTruthy();
-    expect(getByText('This page is protected by Google reCAPTCHA.')).toBeTruthy();
+    expect(getByText('Sign In Now')).toBeTruthy();
+    expect(getByText('Sign In')).toBeTruthy();
+    expect(getByText('Sign In').disabled).toBeTruthy();
+    expect(
+      getByText('This page is protected by Google reCAPTCHA.')
+    ).toBeTruthy();
     expect(getByPlaceholderText('Email Address')).toBeTruthy();
     expect(getByPlaceholderText('Password')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('renders a <Form /> with an error', () => {
+    const { container, getByText, queryByText } = render(
+      <Form>
+        <Form.Error>Your email address is already being used.</Form.Error>
+        <Form.Submit type="submit">Sign In</Form.Submit>
+      </Form>
+    );
+
+    expect(getByText('Your email address is already being used.')).toBeTruthy();
+    expect(queryByText('Sign In').disabled).toBeFalsy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

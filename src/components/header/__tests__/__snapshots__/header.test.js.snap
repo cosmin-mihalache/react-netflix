@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders the basic <Header /> with a background 1`] = `
+<section
+  class="header__Background-sc-1b57ikp-0 ALWkT"
+  data-testid="header-bg"
+>
+  <div
+    class="header__Container-sc-1b57ikp-2 hvyReA"
+  >
+    <p
+      class="header__Link-sc-1b57ikp-4 foLSrX"
+    >
+      Hello, I'm a link!
+    </p>
+  </div>
+</section>
+`;
+
+exports[`<Header /> renders the basic <Header /> without a background 1`] = `
+<div
+  class="header__Container-sc-1b57ikp-2 hvyReA"
+>
+  <p
+    class="header__Link-sc-1b57ikp-4 ittReb"
+  >
+    Hello, I'm a link!
+  </p>
+</div>
+`;
+
+exports[`<Header /> renders the full <Header /> with a background 1`] = `
+<section
+  class="header__Background-sc-1b57ikp-0 eZbbUT"
+  data-testid="header-bg"
+  src="joker"
+>
+  <div
+    class="header__Container-sc-1b57ikp-2 hvyReA"
+  >
+    <div
+      class="header__Group-sc-1b57ikp-1 fCiitE"
+    >
+      <p
+        class="header__Link-sc-1b57ikp-4 ittReb"
+      >
+        Series
+      </p>
+      <p
+        class="header__Link-sc-1b57ikp-4 ittReb"
+      >
+        Films
+      </p>
+    </div>
+    <div
+      class="header__Group-sc-1b57ikp-1 fCiitE"
+    >
+      <div
+        class="header__Search-sc-1b57ikp-6 fjGAMt"
+      >
+        <button
+          class="header__SearchIcon-sc-1b57ikp-7 hBxdhO"
+          data-testid="search-click"
+        >
+          <img
+            alt="Search"
+            src="/images/icons/search.png"
+          />
+        </button>
+        <input
+          class="header__SearchInput-sc-1b57ikp-9 eRLizJ"
+          data-testid="search-input"
+          placeholder="Search films and series"
+          value="Joker"
+        />
+      </div>
+      <div
+        class="header__Profile-sc-1b57ikp-10 fUkepP"
+      >
+        <button
+          class="header__Picture-sc-1b57ikp-3 enshzs"
+          src="/images/users//images/cosmin.png.png"
+        />
+        <div
+          class="header__Dropdown-sc-1b57ikp-5 kYqXN"
+        >
+          <div
+            class="header__Group-sc-1b57ikp-1 fCiitE"
+          >
+            <button
+              class="header__Picture-sc-1b57ikp-3 enshzs"
+              src="/images/users//images/cosmin.png.png"
+            />
+            <p
+              class="header__Link-sc-1b57ikp-4 ittReb"
+            >
+              Cosmin Mihalache
+            </p>
+          </div>
+          <div
+            class="header__Group-sc-1b57ikp-1 fCiitE"
+          >
+            <p
+              class="header__Link-sc-1b57ikp-4 ittReb"
+            >
+              Sign Out
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="header__Container-sc-1b57ikp-2 header__Feature-sc-1b57ikp-13 fhjVyT"
+  >
+    <h2
+      class="header__FeatureCallOut-sc-1b57ikp-15 gAIdxB"
+    >
+      Watch Joker now
+    </h2>
+    <p
+      class="header__Text-sc-1b57ikp-14 hIdodF"
+    >
+      Forever alone in a crowd...
+    </p>
+    <button
+      class="header__PlayButton-sc-1b57ikp-8 cldigT"
+    >
+      Play
+    </button>
+  </div>
+</section>
+`;

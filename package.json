@@ -42,17 +42,18 @@
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.js",
       "!<rootDir>/src/App.js",
+      "!<rootDir>/src/helpers/routes.js",
       "!<rootDir>/src/index.js",
       "!<rootDir>/src/seed.js",
       "!<rootDir>/src/global-styles.js",
       "!<rootDir>/src/components/index.js",
-      "!<rootDir>/src/firebase.prod.js",
+      "!<rootDir>/src/lib/firebase.prod.js",
       "!<rootDir>/src/hooks/*.js",
       "!<rootDir>/src/context/*.js"
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 90,
+        "branches": 80,
         "functions": 90,
         "lines": 90,
         "statments": 90
