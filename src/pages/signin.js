@@ -38,10 +38,9 @@ export default function SignIn() {
         history.push(ROUTES.BROWSE);
       })
       .catch((error) => {
-        setEmailAddress('')
+        setEmailAddress('');
         setPassword('');
-        setError(error.message)
-        
+        setError(error.message);
       });
   };
   return (
@@ -49,7 +48,7 @@ export default function SignIn() {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
 
           <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
@@ -66,7 +65,11 @@ export default function SignIn() {
               onChange={({ target }) => setPassword(target.value)}
             />
 
-            <Form.Submit disabled={isInvalid} type="submit">
+            <Form.Submit
+              data-testid="sign-in"
+              disabled={isInvalid}
+              type="submit"
+            >
               Sign In
             </Form.Submit>
             <Form.Text>

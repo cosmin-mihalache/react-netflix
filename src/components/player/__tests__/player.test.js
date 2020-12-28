@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { Player } from '../../../components';
+import { Player } from '../..';
 
 describe('<Player />', () => {
   it('renders the <Player with a minion video/>', () => {

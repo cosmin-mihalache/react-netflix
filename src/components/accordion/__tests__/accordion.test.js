@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import dataFaq from '../../../fixtures/faq.json';
-import { Accordion } from '../../../components';
+import { Accordion } from '../..';
 
 describe('Accordion', () => {
   it('renders the <Accordion /> with populated data', () => {

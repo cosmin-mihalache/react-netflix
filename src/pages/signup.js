@@ -20,11 +20,11 @@ export default function SignUp() {
 
   const handleSignUp = (event) => {
     event.preventDefault();
-  
-  /* create user with email and password 
-   * Firebase v3 Auth offers an updateProfile method 
-   * that passes displayName and photoURL to Firebase.
-   */
+
+    /* create user with email and password
+     * Firebase v3 Auth offers an updateProfile method
+     * that passes displayName and photoURL to Firebase.
+     */
 
     firebase
       .auth()
@@ -72,7 +72,11 @@ export default function SignUp() {
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInvalid} type="submit">
+            <Form.Submit
+              data-testid="sign-up"
+              disabled={isInvalid}
+              type="submit"
+            >
               Sign Up
             </Form.Submit>
             <Form.Text>

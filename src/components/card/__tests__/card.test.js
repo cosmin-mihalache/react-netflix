@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  render,
-  fireEvent,
-  getByText,
-  getByAltText,
-  queryAllByTestId,
-} from '@testing-library/react';
-import { Card, Player } from '../../../components';
+import { render, fireEvent } from '@testing-library/react';
+import { Card, Player } from '../..';
 
 const category = 'series';
 const slideRows = [

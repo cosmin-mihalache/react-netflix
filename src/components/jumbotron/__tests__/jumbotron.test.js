@@ -5,10 +5,10 @@ import jumbotronData from '../../../fixtures/jumbotron.json';
 
 describe('<Jumbotron />', () => {
   it('renders the <Jumbotron /> with populated data', () => {
-    const { getByText, getAllByAltText, getByTestId } = render(
+    const { container, getByText, getAllByAltText, getByTestId } = render(
       <Jumbotron.Container>
         {jumbotronData.map((item) => (
-          <Jumbotron key={item.id} direction={item.direction}>
+          <Jumbotron key={item.id}>
             <Jumbotron.Pane>
               <Jumbotron.Title>{item.title}</Jumbotron.Title>
               <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
@@ -27,7 +27,12 @@ describe('<Jumbotron />', () => {
 
     expect(getByText('Enjoy on your TV.')).toBeTruthy();
     expect(getByTestId('1-jumbotron')).toBeTruthy();
-    expect(getByText('Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.')).toBeTruthy();
+    expect(
+      getByText(
+        'Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.'
+      )
+    ).toBeTruthy();
     expect(getAllByAltText('Tiger King | Netflix')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
